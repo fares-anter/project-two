@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <!-- style -->
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  <main>
+  <div id="contenar">
+    <div id="content"> 
+      <div id="side1">  <!-- card 1 +2 -->
+     <div class="card-contentar">
+      <div class="card card1">
+        <img src="images/bg-card-front.png" alt="information card">
+        <div class="card-content">
+          <img src="images/card-logo.svg" alt="card-logo">
+          <p class="card-number-display" id="card-number-display">0000  0000  0000  0000</p>
+          <div class="card-ditails-display">
+            <span id="card-name-display">JANE APPLESEED</span>
+            <span id="card-date-display">00/00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card2">
+        <img src="images/bg-card-back.png" alt="card-back">
+
+        <span id="card-cvc-display">000</span>
+      </div>
+     </div> 
+      </div>
+
+
+
+          <!-- ---- -->
+      <div id="side2">
+        
+        <form action="https://formspree.io/f/moejykgw"  method="post" id="card-form"><!-- information -->
+          <div class="name">
+            <label for="name">Cardholder Name</label>
+            <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+           <small class="error"></small>
+          </div>
+          <div class="number">
+            <label for="number">Card Number</label>
+            <input type="text" name="number" id="number" inputmode="numeric" placeholder=" e.g. 1234 5678 9123 0000" maxlength="19">
+           <small class="error"></small>
+          </div>
+          <div class="row">
+            <div class="item1">
+               <label for="Exp-Date-(MM/YY)">Exp. Date (MM/YY)</label>
+              <input type="text" name="MM" id="MM"  inputmode="numeric" placeholder="MM" maxlength="2">
+              <input type="text" name="YY" id="YY" inputmode="numeric" placeholder="YY" maxlength="2">
+             <small class="error"></small>
+            </div>
+            <div class="item2">
+              <label for="cvc">cvc</label>
+              <input type="text" name="cvc" id="cvc" inputmode="numeric"  placeholder="e.g.123" maxlength="3">
+            <small class="error"></small>
+            </div>
+           
+          </div>
+           <button type="button" id="btn">Confirm</button>
+        </form>  
+
+  <div class="hidden" id="thank-you"><!-- new page -->
+<img src="images/icon-complete.svg" alt="Complete">
+<h2>THANK YOU!</h2>
+<p>We've added your card details</p>
+<button type="button" id="continue-btn">Continue</button>
+  </div>
+      </div> 
+    </div>
+  </div>
+  </main>
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Fares anteur</a>.
+  </footer> -->
+  <script src="wow.js"></script>
+</body>
+</html>
+ 
+
+  
+<!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
